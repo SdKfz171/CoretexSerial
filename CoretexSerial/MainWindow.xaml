@@ -7,6 +7,130 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.3*" MinHeight="30"/>
+                <RowDefinition Height="0.5*" MinHeight="60"/>
+                <RowDefinition Height="0.2*" MinHeight="20"/>
+            </Grid.RowDefinitions>
+            
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Horizontal" 
+                            Grid.Column="0" 
+                            HorizontalAlignment="Center">
+                    
+                    <StackPanel Margin="10 0">
+                        <Label HorizontalAlignment="Center">연결 포트</Label>
+                        <ComboBox x:Name="ComPortComboBox"
+                                  VerticalAlignment="Top" HorizontalAlignment="Left" 
+                                  MinWidth="100" Width="Auto" Margin="5" 
+                                  ScrollViewer.VerticalScrollBarVisibility="Visible" MaxDropDownHeight="200"
+                                  SelectionChanged="ComPortComboBox_SelectionChanged"
+                                  GotFocus="ComPortComboBox_GotFocus">
+
+                        </ComboBox>
+                    </StackPanel>
+
+                    <StackPanel Margin="10 0">
+                        <Label HorizontalAlignment="Center">통신 속도(bps)</Label>
+                        <ComboBox x:Name="BaudLateComboBox"
+                                  VerticalAlignment="Top" HorizontalAlignment="Left" 
+                                  MinWidth="100" Width="Auto" Margin="5" 
+                                  ScrollViewer.VerticalScrollBarVisibility="Visible" MaxDropDownHeight="200"
+                                  SelectionChanged="BaudLateComboBox_SelectionChanged">
+                            <ComboBoxItem>300 보드레이트</ComboBoxItem>
+                            <ComboBoxItem>1200 보드레이트</ComboBoxItem>
+                            <ComboBoxItem>2400 보드레이트</ComboBoxItem>
+                            <ComboBoxItem>4800 보드레이트</ComboBoxItem>
+                            <ComboBoxItem>9600 보드레이트</ComboBoxItem>
+                            <ComboBoxItem>19200 보드레이트</ComboBoxItem>
+                            <ComboBoxItem>38400 보드레이트</ComboBoxItem>
+                            <ComboBoxItem>57600 보드레이트</ComboBoxItem>
+                            <ComboBoxItem>115200 보드레이트</ComboBoxItem>
+                            <ComboBoxItem>230400 보드레이트</ComboBoxItem>
+                            <ComboBoxItem>250000 보드레이트</ComboBoxItem>
+                            <ComboBoxItem>500000 보드레이트</ComboBoxItem>
+                            <ComboBoxItem>1000000 보드레이트</ComboBoxItem>
+                            <ComboBoxItem>2000000 보드레이트</ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Margin="5">
+                    <Button x:Name="StateButton" Click="StateButton_Click" HorizontalAlignment="Center" Padding="20 0">Connect</Button>
+                    <Label>문자열 표시 방식 선택</Label>
+                    <StackPanel Orientation="Horizontal" Margin="0 5">
+                        <RadioButton x:Name="HexButton"
+                                     Content="Hex"
+                                     GroupName="CodeGroup"
+                                     Margin="5 0" 
+                                     Checked="HexButton_Checked">
+
+                        </RadioButton>
+                        <RadioButton x:Name="AsciiButton"
+                                     Content="Ascii"
+                                     GroupName="CodeGroup"
+                                     Margin="5 0"
+                                     Checked="AsciiButton_Checked">
+
+                        </RadioButton>
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox x:Name="SendStringNoti"
+                                  Content="송신 문자열 표시"
+                                  Margin="5 0"
+                                  Checked="SendStringNoti_Checked">
+
+                        </CheckBox>
+                        <CheckBox x:Name="RecieveStringNoti"
+                                  Content="수신 문자열 표시"
+                                  Margin="5 0"
+                                  Checked="RecieveStringNoti_Checked">
+
+                        </CheckBox>
+                    </StackPanel>
+
+
+                </StackPanel>
+                
+            </Grid>
+
+            <Border x:Name="TextBlockBorder" 
+                    BorderBrush="Black" BorderThickness="0.5" 
+                    Grid.Row="1" Margin="5" >
+                <Grid>
+                    <TextBlock x:Name="SerialResultBlock"
+                               Padding="2 0"
+                               ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"
+                               Visibility="Collapsed">
+
+                    </TextBlock>
+
+                    <TextBox x:Name="MainTextBox" 
+                             BorderThickness="0"
+                             ScrollViewer.VerticalScrollBarVisibility="Auto"
+                             AcceptsReturn="True" AcceptsTab="True" TextWrapping="Wrap"
+                             Visibility="Visible">
+
+                    </TextBox>
+                </Grid>
+                
+            </Border>
+            
+            
+            
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Click="Button_Click" Margin="5 20">문자열 전송하기</Button>
+                <Button Click="Button_Click" Margin="5 20">시리얼 모니터 띄우기</Button>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
