@@ -1,0 +1,14 @@
+C:\Users\521ab\Source\Repos\CoretexSerial\CoretexSerial\bin\Debug\CoretexSerial.exe.config
+C:\Users\521ab\Source\Repos\CoretexSerial\CoretexSerial\bin\Debug\CoretexSerial.exe
+C:\Users\521ab\Source\Repos\CoretexSerial\CoretexSerial\bin\Debug\CoretexSerial.pdb
+C:\Users\521ab\Source\Repos\CoretexSerial\CoretexSerial\obj\Debug\CoretexSerial.csprojAssemblyReference.cache
+C:\Users\521ab\Source\Repos\CoretexSerial\CoretexSerial\obj\Debug\MainWindow.g.cs
+C:\Users\521ab\Source\Repos\CoretexSerial\CoretexSerial\obj\Debug\App.g.cs
+C:\Users\521ab\Source\Repos\CoretexSerial\CoretexSerial\obj\Debug\CoretexSerial_MarkupCompile.cache
+C:\Users\521ab\Source\Repos\CoretexSerial\CoretexSerial\obj\Debug\CoretexSerial_MarkupCompile.lref
+C:\Users\521ab\Source\Repos\CoretexSerial\CoretexSerial\obj\Debug\MainWindow.baml
+C:\Users\521ab\Source\Repos\CoretexSerial\CoretexSerial\obj\Debug\CoretexSerial.g.resources
+C:\Users\521ab\Source\Repos\CoretexSerial\CoretexSerial\obj\Debug\CoretexSerial.Properties.Resources.resources
+C:\Users\521ab\Source\Repos\CoretexSerial\CoretexSerial\obj\Debug\CoretexSerial.csproj.GenerateResource.cache
+C:\Users\521ab\Source\Repos\CoretexSerial\CoretexSerial\obj\Debug\CoretexSerial.exe
+C:\Users\521ab\Source\Repos\CoretexSerial\CoretexSerial\obj\Debug\CoretexSerial.pdb
